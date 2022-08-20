@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: type_annotate_public_apis, lines_longer_than_80_chars
+
 part of 'social_auth_api.dart';
 
 // **************************************************************************
