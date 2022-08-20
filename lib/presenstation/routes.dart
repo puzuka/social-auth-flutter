@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:social_auth_flutter/example.dart';
+
+import 'onboarding/onboarding_routes.dart';
 
 class Routes {
   static Map<String, WidgetBuilder> _getAll(RouteSettings settings) => {
-        'example': (_) => const MyApp(),
+        ...OnBoardingRoutes.getAll(settings),
       };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {

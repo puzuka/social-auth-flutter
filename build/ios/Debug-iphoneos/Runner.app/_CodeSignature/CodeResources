@@ -10,11 +10,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		9+2qbxmBmeduoclc4P358en5Oyw=
+		NbtPuZgFXrRsbmtSM4d3JXbEeko=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		fDuzk1YNyiR9Exonq/It48gxYkU=
+		DLvEVszLtVTlhF9/WyHtuXeD8hY=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		WWOntItdaY2TWrXXsUxBMKI7c2o=
+		xz5wP+CcZqQ6eUDOpNugcWPr9xw=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		r77QwhgtEuEcntBuLzumAgGV5pA=
+		+l8aEZN7uRXTMH9VlrL3pnPwgYc=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		iPexya5T+ZHvRVqGidKhSs+Iegc=
+		mZ3wzyIXpvqS2112VAKyJx5BOe4=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/icon/ic_apple.svg</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		/mXc+YBpxZq+IPAxIIbTSkP4/EM=
+		fBzGz8yZStlFfweTNIcexXw7E1s=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -196,9 +196,21 @@
 		<data>
 		5zcJ5BY+w7z+M0to6P+uUWPn04o=
 		</data>
+		<key>Frameworks/path_provider_ios.framework/Info.plist</key>
+		<data>
+		EsAjIVVBacd+bmyqSv434yj4t4E=
+		</data>
+		<key>Frameworks/path_provider_ios.framework/_CodeSignature/CodeResources</key>
+		<data>
+		/Nu/XhCrEPc+Qdz+KptHIxgrZtM=
+		</data>
+		<key>Frameworks/path_provider_ios.framework/path_provider_ios</key>
+		<data>
+		fDDShXKWhQPW7eOF3PcPo5TekcU=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		zfkVbC03F3g4SMDlAdN++OnxD6M=
+		LtxN/QlyeuJ3t+kqVotaJlK9KLs=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -222,14 +234,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y6twxFlK1fq5IPC6I7VBrodKvf3EsPO5LYTfsEjSI/A=
+			oY6P9YD5a28315MUCAYMDS3wLCdY29OW2QZ5Pii5eGQ=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ml1TuK/fF64NwcU2cC8xmYECuKN2RROlXHnulflLT6I=
+			YcMKKFfKN50tmBVn6Lxm3pdIM1WH6dN85+v5TFI6GUY=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -271,7 +283,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1t5RXxtxI9OSppO1nu9hnjkJOqGIPeCh4JhYIPI/B3w=
+			o98x6hbkkG+gHJ2vC38tfg+62Eo76ARrTNlJW0WoDEI=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -285,7 +297,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FpTvI7Gp7NSx8iE3kvm8vzVS/oncp7kzegSBFh6EG78=
+			jjaoRnmAXJevllx6slUshQDAHHOZSmPQuyvfLVBCVYM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -306,7 +318,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q06/MabRYawEK7oGqvTt2TbKAxsf6v10ZZw/Hk1YvVA=
+			Ruj353qOM/elaap8DUyJpjkzhy/hS8lxIvbVb0tFE8E=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/icon/ic_apple.svg</key>
@@ -383,7 +395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WQmuEDNnX0QycQ4jY8owqOQqYNUZqu1f26wEFDFdbfs=
+			SFZ1Q9v24bKo1B9OCf3tq5QakcRRn8djrQXXGLxbnHg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -545,6 +557,27 @@
 			<key>hash2</key>
 			<data>
 			yNAOslsdK6e70q88cOrqlKovbuH0GiUDe+ICgawnSrQ=
+			</data>
+		</dict>
+		<key>Frameworks/path_provider_ios.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ArPjWfWJIBF+1JWnR2xxAdvv7Tf/Wlup1ei9wJBg5Cs=
+			</data>
+		</dict>
+		<key>Frameworks/path_provider_ios.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xgIMTwHZ1q6djv7J5k22Xm5rIu3h0kqSjfUsxXTK/Cw=
+			</data>
+		</dict>
+		<key>Frameworks/path_provider_ios.framework/path_provider_ios</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			bhiPYRck5q1HyBfBgV5cDu4r2oq8AeJRwdICoUOBJaU=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
