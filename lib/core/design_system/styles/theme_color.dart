@@ -1,5 +1,3 @@
-// Copyright 2022 Fighttech.vn, Ltd. All rights reserved.
-
 part of 'theme.dart';
 
 abstract class ThemeColor {
