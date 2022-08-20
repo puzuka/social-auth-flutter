@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'app_main_factory.dart';
+import 'home/home_screen.dart';
 import 'onboarding/onboarding_routes.dart';
 
 class Routes {
   static Map<String, WidgetBuilder> _getAll(RouteSettings settings) => {
         ...OnBoardingRoutes.getAll(settings),
+        HomeScreen.routeName: (context) =>
+            AppMainFactory.create<HomeScreen>(arguments: settings.arguments)
       };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
