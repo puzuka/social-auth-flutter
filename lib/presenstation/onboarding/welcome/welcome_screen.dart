@@ -5,6 +5,7 @@ import '../../../core/design_system/resources/icon_constants.dart';
 import '../../../core/design_system/resources/image_constants.dart';
 import '../../../core/design_system/styles/theme.dart';
 import '../../../core/extensions/context_ext.dart';
+import '../../shared/widgets/switch_language_widget.dart';
 import '../onboarding_coordinator.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -26,9 +27,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(bottom: 40, top: 20),
-                child: Center(child: ImageWidget(ImageConstants.logo)),
+              Stack(
+                children: const [
+                  Center(
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: 40, top: 20),
+                      child: ImageWidget(ImageConstants.logo),
+                    ),
+                  ),
+                  Positioned(
+                    right: 10,
+                    top: 10,
+                    child: SwitchLanguageWidget(isShortInfo: true),
+                  )
+                ],
               ),
               const Padding(
                 padding: EdgeInsets.only(bottom: 40),
@@ -54,7 +66,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             child: const ImageWidget(IconConstants.google),
                           ),
                         ),
-                        const Center(child: Text('Login with Google')),
+                        Center(
+                          child: Text(context.translate.lblLoginWithGoogle),
+                        ),
                       ],
                     ),
                   ),
@@ -70,7 +84,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           context.theme.themeColor.backgroundCart),
                     ),
                     child: Text(
-                      'Sign up with email or phone number',
+                      context.translate.lblSignUpWithEmailOrPhone,
                       style: context.themeText.bodyMedium
                           ?.copyWith(color: context.themeColor.textColor),
                     )),
@@ -78,13 +92,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 26, bottom: 26),
                 child: Row(
-                  children: const [
-                    Expanded(child: Divider()),
+                  children: [
+                    const Expanded(child: Divider()),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Text('Or'),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Text(context.translate.lblOr),
                     ),
-                    Expanded(child: Divider()),
+                    const Expanded(child: Divider()),
                   ],
                 ),
               ),
@@ -92,11 +106,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Already have an account? '),
+                    Text(context.translate.lblAlreadyHaveAnAccount),
                     GestureDetector(
                       onTap: _onTapSignin,
                       child: Text(
-                        'Sign in',
+                        context.translate.lblSignIn,
                         style: TextStyle(color: Theme.of(context).primaryColor),
                       ),
                     )

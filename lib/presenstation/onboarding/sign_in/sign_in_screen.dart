@@ -21,8 +21,36 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  final ctrlTextFieldUsername = TextEditingController(text: 'PuzDev@gmail.com');
-  final ctrlTextFieldPassword = TextEditingController(text: '123456');
+  final ValueNotifier<bool> _obscureText = ValueNotifier(true);
+  final _ctrlTextFieldUsername =
+      TextEditingController(text: 'PuzDev@gmail.com');
+  final _ctrlTextFieldPassword = TextEditingController(text: '123456');
+
+  void _onTapForgetPassword() {}
+
+  void _onTapLogin() {
+    context.read<SignInBloc>().add(SubmitSignInEvent(
+        email: _ctrlTextFieldUsername.text,
+        password: _ctrlTextFieldPassword.text));
+  }
+
+  void _onChangeOnscureText() {
+    _obscureText.value = !_obscureText.value;
+  }
+
+  void _onListenerEventBloc(BuildContext context, SignInState state) {
+    if (state is SingInSuccess) {
+      AppMainCoordinator.startHomeApp(context, userInfo: state.user);
+    } else if (state is SingInFailed) {
+      showToastMessage(state.msg, ToastMessageType.error);
+    }
+  }
+
+  @override
+  void dispose() {
+    _obscureText.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,22 +78,35 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                       ),
                       const SizedBox(height: 8.0),
-                      const Text('Log in to make your memories.'),
+                      Text(context.translate.lblLoginInToMake),
                       Padding(
                         padding: const EdgeInsets.only(top: 24, bottom: 12),
                         child: TextField(
-                          controller: ctrlTextFieldUsername,
-                          decoration: const InputDecoration(
-                              hintText: 'Username, email or phone number'),
+                          controller: _ctrlTextFieldUsername,
+                          decoration: InputDecoration(
+                              hintText: context.translate.lblUsernameHint),
                         ),
                       ),
-                      TextField(
-                        obscureText: true,
-                        controller: ctrlTextFieldPassword,
-                        decoration: const InputDecoration(
-                          hintText: 'Password',
-                          suffixIcon: Icon(Icons.remove_red_eye_outlined),
-                        ),
+                      ValueListenableBuilder<bool>(
+                        valueListenable: _obscureText,
+                        builder: (_, obscureText, __) {
+                          return TextField(
+                            obscureText: obscureText,
+                            controller: _ctrlTextFieldPassword,
+                            autofillHints: const [AutofillHints.password],
+                            decoration: InputDecoration(
+                              hintText: context.translate.lblPassowrdHint,
+                              suffixIcon: GestureDetector(
+                                onTap: _onChangeOnscureText,
+                                child: Icon(
+                                  obscureText
+                                      ? Icons.lock_outline
+                                      : Icons.lock_open_sharp,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 16, bottom: 24),
@@ -74,7 +115,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           child: GestureDetector(
                             onTap: _onTapForgetPassword,
                             child: Text(
-                              'Forget password?',
+                              context.translate.lblForgetPassword,
                               style: context.theme.textTheme.bodyMedium
                                   ?.copyWith(color: context.theme.primaryColor),
                             ),
@@ -83,16 +124,16 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                       ElevatedButton(
                         onPressed: _onTapLogin,
-                        child: const Text('Log In'),
+                        child: Text(context.translate.lblLogin),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 24, bottom: 32),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text('Don’t have an account? '),
+                            Text(context.translate.lblDontHaveAnAccount),
                             Text(
-                              'Sign up',
+                              context.translate.lblSignUp,
                               style: context.theme.textTheme.bodyMedium
                                   ?.copyWith(color: context.theme.primaryColor),
                             )
@@ -100,13 +141,13 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                       ),
                       Row(
-                        children: const [
-                          Expanded(child: Divider()),
+                        children: [
+                          const Expanded(child: Divider()),
                           Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10),
-                            child: Text('Or login with'),
+                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                            child: Text(context.translate.lblOrLoginWith),
                           ),
-                          Expanded(child: Divider()),
+                          const Expanded(child: Divider()),
                         ],
                       ),
                       Padding(
@@ -136,14 +177,6 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-  void _onTapForgetPassword() {}
-
-  void _onTapLogin() {
-    context.read<SignInBloc>().add(SubmitSignInEvent(
-        email: ctrlTextFieldUsername.text,
-        password: ctrlTextFieldPassword.text));
-  }
-
   Widget _renderButtonIcon(String icon, {Function()? onTap}) {
     return GestureDetector(
       onTap: onTap,
@@ -166,13 +199,5 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
       ),
     );
-  }
-
-  void _onListenerEventBloc(BuildContext context, SignInState state) {
-    if (state is SingInSuccess) {
-      AppMainCoordinator.startHomeApp(context, userInfo: state.user);
-    } else if (state is SingInFailed) {
-      showToastMessage(state.msg, ToastMessageType.error);
-    }
   }
 }

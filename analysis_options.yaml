@@ -6,7 +6,8 @@ analyzer:
   errors:
     todo: ignore
   exclude:
-    - modules/localization/lib/generated/intl/**.dart
+    - lib/core/localization/generated/**.dart
+    - lib/data/datasources/remote/**.g.dart
 
 linter:
   rules:

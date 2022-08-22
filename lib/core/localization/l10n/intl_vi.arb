@@ -1,0 +1,37 @@
+{
+    "@@locale": "vi",
+    "helloWorld": "Xin Chào",
+    "@helloWorld": {
+        "description": "Xin Chào Việt Nam!"
+    },
+    "lblLoginWithGoogle": "Đăng nhập với Google",
+    "lblSignUpWithEmailOrPhone": "Đăng ký với email hoặc số điện thoại",
+    "lblAlreadyHaveAnAccount": "Bạn đã có sẵn tài khoản? ",
+    "lblSignIn": "Đăng nhập",
+    "lblSignUp": "Đăng ký",
+    "lblOr": "Hoặc",
+    "lblOrLoginWith": "Hoặc login với",
+    "lblDontHaveAnAccount": "Bạn chưa có tài khoản? ",
+    "lblLoginInToMake": "Log in to make your memories.",
+    "lblForgetPassword": "Quên mật khẩu?",
+    "lblUsernameHint": "Tên đăng nhập, email hoặc số điện thoại",
+    "lblPassowrdHint": "Mật khẩu",
+    "lblLogin": "Đăng nhập",
+    "lblHello": "Xin chào {name}!",
+    "@lblHello": {
+        "description": "The number of posts found",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "lblTitleAppBarHome": "Trang Chủ",
+    "lblDarkMode": "Chế Độ Tối",
+    "lblLightMode": "Chế Độ Sáng",
+    "lblTitleVI": "Tiếng Việt",
+    "lblTitleEN": "Tiếng Anh",
+    "lblLocalVI": "vi",
+    "lblLocalEN": "en"
+
+}

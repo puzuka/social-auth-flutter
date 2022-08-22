@@ -46,4 +46,7 @@ class ThemeColorDark extends ThemeColor {
 
   @override
   Color get borderCard => const Color(0xffE7E8EA);
+
+  @override
+  Color get exit => Colors.red;
 }

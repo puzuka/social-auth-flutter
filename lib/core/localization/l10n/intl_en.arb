@@ -1,0 +1,36 @@
+{
+    "@@locale": "en",
+    "helloWorld": "Hello World! - EN",
+    "@helloWorld": {
+        "description": "The conventional newborn programmer greeting"
+    },
+    "lblLoginWithGoogle": "Login with Google",
+    "lblSignUpWithEmailOrPhone": "Sign up with email or phone number",
+    "lblAlreadyHaveAnAccount": "Already have an account? ",
+    "lblSignIn": "Sign in",
+    "lblSignUp": "Sign up",
+    "lblOr": "Or",
+    "lblOrLoginWith": "Or login with",
+    "lblDontHaveAnAccount": "Don't have an account? ",
+    "lblLoginInToMake": "Log in to make your memories.",
+    "lblForgetPassword": "Forget password?",
+    "lblUsernameHint": "Username, email or phone number",
+    "lblPassowrdHint": "Password",
+    "lblLogin": "Log In",
+    "lblHello": "Hello {name}!",
+    "@lblHello": {
+        "description": "The number of posts found",
+        "placeholders": {
+            "name": {
+                "type": "String"
+            }
+        }
+    },
+    "lblTitleAppBarHome": "Home Page",
+    "lblDarkMode": "Dark Mode",
+    "lblLightMode": "Light Mode",
+    "lblTitleVI": "Vietnamese",
+    "lblTitleEN": "English",
+    "lblLocalVI": "vi",
+    "lblLocalEN": "en"
+}
