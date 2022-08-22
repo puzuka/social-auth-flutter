@@ -54,7 +54,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             child: const ImageWidget(IconConstants.google),
                           ),
                         ),
-                        const Center(child: Text('Login with Google')),
+                        Center(
+                          child: Text(context.translate.lblLoginWithGoogle),
+                        ),
                       ],
                     ),
                   ),
@@ -70,7 +72,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                           context.theme.themeColor.backgroundCart),
                     ),
                     child: Text(
-                      'Sign up with email or phone number',
+                      context.translate.lblSignUpWithEmailOrPhone,
                       style: context.themeText.bodyMedium
                           ?.copyWith(color: context.themeColor.textColor),
                     )),
@@ -78,13 +80,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(top: 26, bottom: 26),
                 child: Row(
-                  children: const [
-                    Expanded(child: Divider()),
+                  children: [
+                    const Expanded(child: Divider()),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Text('Or'),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Text(context.translate.lblOr),
                     ),
-                    Expanded(child: Divider()),
+                    const Expanded(child: Divider()),
                   ],
                 ),
               ),
@@ -92,11 +94,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Already have an account? '),
+                    Text(context.translate.lblAlreadyHaveAnAccount),
                     GestureDetector(
                       onTap: _onTapSignin,
                       child: Text(
-                        'Sign in',
+                        context.translate.lblSignIn,
                         style: TextStyle(color: Theme.of(context).primaryColor),
                       ),
                     )
