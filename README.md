@@ -14,6 +14,19 @@ This repository contains all source code flutter for the project.
 
 # Application Clean Architecture
 
+```
+|-----------------  Layers  ------------------|
+| Presentations  |  Doamin     |   Data Layer |
+|:-------------------------------------------:|
+
+|--------------------------  Actual  ---------------------------|
+| Presentations  |        Doamin          |         Data        |
+|:-------------------------------------------------------------:|
+| View <--> ViewModel <--> UseCase <--> Repository <--> API/Dao |
+|:-------------------------------------------------------------:|
+|:----       Entity         ----|----       Model      --------:|
+|:-------------------------------------------------------------:|
+```
 ![image](https://user-images.githubusercontent.com/13028582/186032061-21c60ce0-da97-45e0-9e2e-15f9f6fc89d2.png)
 
 **Technology stack details**
