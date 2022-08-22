@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 part 'colors/dark.dart';
@@ -80,11 +79,12 @@ extension ThemeDataExt on ThemeData {
         ),
       ),
       appBarTheme: AppBarTheme(
-          titleTextStyle: themeText.appBarThemeTitleStyle,
-          backgroundColor: dataThemeColor.scaffoldBackground,
-          elevation: 0,
-          centerTitle: false,
-          iconTheme: const IconThemeData(color: Colors.black)),
+        titleTextStyle: themeText.appBarThemeTitleStyle,
+        backgroundColor: dataThemeColor.scaffoldBackground,
+        elevation: 0,
+        centerTitle: false,
+        iconTheme: const IconThemeData(color: Colors.black),
+      ),
       inputDecorationTheme: InputDecorationTheme(
         isDense: true,
         contentPadding: const EdgeInsets.symmetric(
@@ -114,8 +114,6 @@ extension ThemeDataExt on ThemeData {
               color: Color(0xffE7E8EA), width: 5, style: BorderStyle.solid),
         ),
       ),
-      cupertinoOverrideTheme:
-          const CupertinoThemeData(brightness: Brightness.dark),
     );
   }
 }

@@ -1,10 +1,10 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/extensions/context_ext.dart';
 import '../../domain/entities/user.dart';
-import '../shared/app_setting_bloc/app_setting_bloc.dart';
+import '../onboarding/onboarding_coordinator.dart';
+import '../shared/widgets/switch_language_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = '/home';
@@ -18,6 +18,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void _onTapLogout() => OnboardingCoordinator.startWelcomeScreen(context);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Center(
             child: Text(context.translate.lblHello(widget.userInfo.name)),
           ),
-          _renderRowWithExpendItem(
+          Row(
             children: [
               Text(context.translate.lblLightMode),
               Switch(
@@ -45,40 +47,31 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
               Text(context.translate.lblDarkMode),
-            ],
+            ]
+                .map((e) => Expanded(
+                        child: Align(
+                      alignment: Alignment.center,
+                      child: e,
+                    )))
+                .toList(),
           ),
-          _renderRowWithExpendItem(
-            children: [
-              Text(context.translate.lblTitleVI),
-              Switch(
-                value: Localizations.localeOf(context).languageCode == 'en',
-                onChanged: (bool newValue) {
-                  if (Localizations.localeOf(context).languageCode == 'en') {
-                    context.read<AppSettingBloc>().add(SaveLanguageEvent('vi'));
-                  } else {
-                    context.read<AppSettingBloc>().add(SaveLanguageEvent('en'));
-                  }
-                },
-              ),
-              Text(context.translate.lblTitleEN),
-            ],
-          ),
+          const SwitchLanguageWidget(),
         ],
       ),
-    );
-  }
-
-  Widget _renderRowWithExpendItem({
-    required List<Widget> children,
-    Alignment alignment = Alignment.center,
-  }) {
-    return Row(
-      children: List.generate(
-        children.length,
-        (index) => Expanded(
-          child: Align(
-            alignment: alignment,
-            child: children[index],
+      floatingActionButton: Material(
+        color: context.themeColor.accent,
+        borderRadius: BorderRadius.circular(40),
+        child: InkWell(
+          onTap: _onTapLogout,
+          borderRadius: BorderRadius.circular(40),
+          child: SizedBox(
+            width: 60,
+            height: 60,
+            child: Center(
+                child: Text(
+              'Logout',
+              style: TextStyle(color: context.themeColor.primary),
+            )),
           ),
         ),
       ),

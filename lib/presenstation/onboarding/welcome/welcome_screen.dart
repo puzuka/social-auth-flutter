@@ -5,6 +5,7 @@ import '../../../core/design_system/resources/icon_constants.dart';
 import '../../../core/design_system/resources/image_constants.dart';
 import '../../../core/design_system/styles/theme.dart';
 import '../../../core/extensions/context_ext.dart';
+import '../../shared/widgets/switch_language_widget.dart';
 import '../onboarding_coordinator.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -26,9 +27,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(bottom: 40, top: 20),
-                child: Center(child: ImageWidget(ImageConstants.logo)),
+              Stack(
+                children: const [
+                  Center(
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: 40, top: 20),
+                      child: ImageWidget(ImageConstants.logo),
+                    ),
+                  ),
+                  Positioned(
+                    right: 10,
+                    top: 10,
+                    child: SwitchLanguageWidget(isShortInfo: true),
+                  )
+                ],
               ),
               const Padding(
                 padding: EdgeInsets.only(bottom: 40),

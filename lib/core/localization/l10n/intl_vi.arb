@@ -30,6 +30,8 @@
     "lblDarkMode": "Chế Độ Tối",
     "lblLightMode": "Chế Độ Sáng",
     "lblTitleVI": "Tiếng Việt",
-    "lblTitleEN": "Tiếng Anh"
+    "lblTitleEN": "Tiếng Anh",
+    "lblLocalVI": "vi",
+    "lblLocalEN": "en"
 
 }

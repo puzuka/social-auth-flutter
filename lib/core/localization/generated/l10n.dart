@@ -213,6 +213,18 @@ abstract class S {
   /// In en, this message translates to:
   /// **'English'**
   String get lblTitleEN;
+
+  /// No description provided for @lblLocalVI.
+  ///
+  /// In en, this message translates to:
+  /// **'vi'**
+  String get lblLocalVI;
+
+  /// No description provided for @lblLocalEN.
+  ///
+  /// In en, this message translates to:
+  /// **'en'**
+  String get lblLocalEN;
 }
 
 class _SDelegate extends LocalizationsDelegate<S> {

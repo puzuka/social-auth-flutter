@@ -4,7 +4,7 @@ class ThemeColorLight extends ThemeColor {
   @override
   Color get primary => const Color(0xFF6C5DD3);
   @override
-  Color get accent => const Color(0xFF00c6f7);
+  Color get accent => const Color.fromARGB(255, 182, 216, 164);
   @override
   Color get scaffoldBackground => Colors.white;
   @override
@@ -46,4 +46,7 @@ class ThemeColorLight extends ThemeColor {
 
   @override
   Color get borderCard => const Color(0xffE7E8EA);
+
+  @override
+  Color get exit => Colors.red;
 }

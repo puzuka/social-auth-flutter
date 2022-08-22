@@ -46,7 +46,6 @@ class ThemeText {
         titleMedium: _cloneTextStyle(
           family: kFontHelveticaNeueRoman,
           fontSize: 16,
-          fontWeight: FontWeight.bold,
           color: themeColor.textColor,
         ),
 
@@ -54,7 +53,6 @@ class ThemeText {
         titleSmall: _cloneTextStyle(
           family: kFontHelveticaNeueRoman,
           fontSize: 14,
-          fontWeight: FontWeight.bold,
           color: themeColor.textColor,
         ),
 

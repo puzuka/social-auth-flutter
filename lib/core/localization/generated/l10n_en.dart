@@ -68,4 +68,10 @@ class SEn extends S {
 
   @override
   String get lblTitleEN => 'English';
+
+  @override
+  String get lblLocalVI => 'vi';
+
+  @override
+  String get lblLocalEN => 'en';
 }

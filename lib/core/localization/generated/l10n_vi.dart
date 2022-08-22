@@ -68,4 +68,10 @@ class SVi extends S {
 
   @override
   String get lblTitleEN => 'Tiếng Anh';
+
+  @override
+  String get lblLocalVI => 'vi';
+
+  @override
+  String get lblLocalEN => 'en';
 }

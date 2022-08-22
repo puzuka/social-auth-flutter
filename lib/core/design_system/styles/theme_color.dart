@@ -33,4 +33,6 @@ abstract class ThemeColor {
   Color get backgroundCart;
 
   Color get borderCard;
+
+  Color get exit;
 }

@@ -30,5 +30,7 @@
     "lblDarkMode": "Dark Mode",
     "lblLightMode": "Light Mode",
     "lblTitleVI": "Vietnamese",
-    "lblTitleEN": "English"
+    "lblTitleEN": "English",
+    "lblLocalVI": "vi",
+    "lblLocalEN": "en"
 }
