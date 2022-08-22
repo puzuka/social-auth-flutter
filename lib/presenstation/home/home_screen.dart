@@ -68,10 +68,12 @@ class _HomeScreenState extends State<HomeScreen> {
             width: 60,
             height: 60,
             child: Center(
-                child: Text(
-              'Logout',
-              style: TextStyle(color: context.themeColor.primary),
-            )),
+              child: Text(
+                context.translate.lblSignOut,
+                textAlign: TextAlign.center,
+                style: TextStyle(color: context.themeColor.primary),
+              ),
+            ),
           ),
         ),
       ),

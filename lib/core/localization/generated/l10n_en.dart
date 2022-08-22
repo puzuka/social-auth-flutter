@@ -20,6 +20,9 @@ class SEn extends S {
   String get lblAlreadyHaveAnAccount => 'Already have an account? ';
 
   @override
+  String get lblSignOut => 'Sign out';
+
+  @override
   String get lblSignIn => 'Sign in';
 
   @override

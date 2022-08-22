@@ -20,6 +20,9 @@ class SVi extends S {
   String get lblAlreadyHaveAnAccount => 'Bạn đã có sẵn tài khoản? ';
 
   @override
+  String get lblSignOut => 'Đăng xuất';
+
+  @override
   String get lblSignIn => 'Đăng nhập';
 
   @override

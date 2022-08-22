@@ -118,6 +118,12 @@ abstract class S {
   /// **'Already have an account? '**
   String get lblAlreadyHaveAnAccount;
 
+  /// No description provided for @lblSignOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign out'**
+  String get lblSignOut;
+
   /// No description provided for @lblSignIn.
   ///
   /// In en, this message translates to:
