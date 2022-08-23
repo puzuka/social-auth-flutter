@@ -101,6 +101,6 @@ Apply Clean Architecture + MVVM (with BloC used to replace the traditional ViewM
  - [x] Flutter lint
  - [x] Theme dark mode and light mode
  - [x] Communicate Cross domain (MultiBlocProvicer)
- - [x] Support dependency_injection cross domain use to `app_core/lib/src/core/dependency_injection/di.dart` 
+ - [x] Support dependency_injection cross domain use to `lib/core/components/dependency_injection/di.dart` 
  - [ ] Router for Navigator
   
