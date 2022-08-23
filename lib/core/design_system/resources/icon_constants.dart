@@ -6,5 +6,4 @@ class IconConstants {
 
   static const flagEn = 'assets/img/flag/gb.png';
   static const flagVi = 'assets/img/flag/vn.png';
-
 }

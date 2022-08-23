@@ -1,6 +1,3 @@
-
-
-
 import 'l10n.dart';
 
 /// The translations for Vietnamese (`vi`).
@@ -14,7 +11,8 @@ class SVi extends S {
   String get lblLoginWithGoogle => 'Đăng nhập với Google';
 
   @override
-  String get lblSignUpWithEmailOrPhone => 'Đăng ký với email hoặc số điện thoại';
+  String get lblSignUpWithEmailOrPhone =>
+      'Đăng ký với email hoặc số điện thoại';
 
   @override
   String get lblAlreadyHaveAnAccount => 'Bạn đã có sẵn tài khoản? ';
