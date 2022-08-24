@@ -1,6 +1,6 @@
 # Social Auth Flutter
 
-This is a project built with Clean Architecture and MVVM.
+This is a boilerplate project mobile app built with Clean Architecture and MVVM.
 The source code structure is built with the criteria that it can be upgraded to Micro Front-End architecture if the scope of the project expands.
 
 This repository contains all source code flutter for the project.
